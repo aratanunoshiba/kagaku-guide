@@ -1,0 +1,187 @@
+<!-- ①年間カレンダー — カスタムHTMLブロックに貼り付けてください -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
+
+<div class="guide-wrap">
+  <div id="g-page-calendar" class="page active">
+    <div class="g-sub-header">
+      <button class="g-back-btn" onclick="if(window.history.length>1)history.back();else goToGuideTop();">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"/></svg>
+        もどる
+      </button>
+      <div class="g-sub-icon g-ic-blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#378add" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+      </div>
+      <div>
+        <span class="g-sub-num">① CALENDAR</span>
+        <span class="g-sub-title">年間カレンダー</span>
+      </div>
+    </div>
+    <div class="g-cal-title">
+      <h2>2025年度 年間カレンダー</h2>
+      <p>科学の学校</p>
+    </div>
+    <div class="g-cal-frame">
+      <!-- ↓ カレンダー画像をここに差し替えてください -->
+      <!-- <img src="カレンダー画像のURL" alt="2025年度年間カレンダー"> -->
+      <p style="color:#ccc;text-align:center;padding:40px 0;">カレンダー画像をここに貼り付けてください</p>
+    </div>
+    <div class="g-bottom-back">
+      <button class="g-bottom-btn" onclick="if(window.history.length>1)history.back();else goToGuideTop();">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"/></svg>
+        ガイドトップにもどる
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+body, body * { box-sizing: border-box !important; }
+.guide-wrap {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif !important;
+  background: #f5f4ef !important;
+  max-width: 480px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block !important;
+  font-size: 14px !important;
+  color: #1a1a1a !important;
+}
+
+/* ============ サブページ共通 ============ */
+.guide-wrap .page { display: none !important; }
+.guide-wrap .page.active { display: block !important; }
+
+.guide-wrap .g-sub-header {
+  background: #1a3a5c !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+.guide-wrap .g-back-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 6px 12px 6px 8px !important;
+  font-size: 13px !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.guide-wrap .g-back-btn svg {
+  width: 15px !important;
+  height: 15px !important;
+  display: block !important;
+}
+.guide-wrap .g-sub-icon {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+.guide-wrap .g-sub-icon svg {
+  width: 16px !important;
+  height: 16px !important;
+  display: block !important;
+}
+.guide-wrap .g-sub-num {
+  font-size: 9px !important;
+  color: #9bbdd8 !important;
+  letter-spacing: 0.08em !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.guide-wrap .g-sub-title {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.guide-wrap .g-ic-blue { background: #e6f1fb !important; }
+
+/* ============ カレンダーページ ============ */
+.guide-wrap .g-cal-title {
+  text-align: center !important;
+  padding: 20px 0 16px !important;
+  display: block !important;
+}
+.guide-wrap .g-cal-title h2 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #6b2040 !important;
+  margin: 0 0 3px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+.guide-wrap .g-cal-title p {
+  font-size: 11px !important;
+  color: #b07080 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.guide-wrap .g-cal-frame {
+  background: rgba(255,255,255,0.85) !important;
+  border: 1.5px solid rgba(210,130,155,0.3) !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+  min-height: 200px !important;
+  margin: 0 14px !important;
+  display: block !important;
+}
+.guide-wrap .g-cal-frame img {
+  width: 100% !important;
+  border-radius: 10px !important;
+  display: block !important;
+  height: auto !important;
+}
+
+/* ============ 下部ボタン ============ */
+.guide-wrap .g-bottom-back {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 24px 0 0 0 !important;
+  padding: 0 !important;
+}
+.guide-wrap .g-bottom-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #1a3a5c !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 24px !important;
+  padding: 12px 28px !important;
+  font-size: 13px !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.guide-wrap .g-bottom-btn svg {
+  width: 15px !important;
+  height: 15px !important;
+  display: block !important;
+}
+.guide-wrap .g-bottom-btn:active { opacity: 0.8 !important; }
+</style>
+
+<script>
+function goToGuideTop() {
+  // ガイドトップページへのURL を記入してください
+  // window.location.href = 'ガイドトップページのURL';
+}
+</script>
