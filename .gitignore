@@ -5,3 +5,10 @@
 *.bak
 *.bak2
 *_backup_*.html
+
+# 機密ファイル（誤ってGitHubに上げないための予防）
+.env
+.env.*
+credentials.json
+*.pem
+*.key
