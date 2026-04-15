@@ -396,6 +396,32 @@
 .guide-wrap .g-bottom-btn svg { width: 15px !important; height: 15px !important; display: block !important; }
 .guide-wrap .g-bottom-btn:active { opacity: 0.8 !important; }
 
+/* ===== カレンダーページ専用 ===== */
+.guide-wrap .g-pdf-label {
+  font-size: 11px !important;
+  color: #888 !important;
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+.guide-wrap .g-pdf-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #1a3a5c !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  padding: 14px 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+  margin-bottom: 10px !important;
+}
+.guide-wrap .g-pdf-btn:last-child { margin-bottom: 0 !important; }
+.guide-wrap .g-pdf-btn:hover { opacity: 0.85 !important; text-decoration: none !important; }
+.guide-wrap .g-pdf-btn svg { flex-shrink: 0 !important; }
+
 /* ===== LINEページ専用 ===== */
 .guide-wrap .g-line-block {
   background: #fff !important;
