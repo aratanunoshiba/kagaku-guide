@@ -422,6 +422,44 @@
 .guide-wrap .g-pdf-btn:hover { opacity: 0.85 !important; text-decoration: none !important; }
 .guide-wrap .g-pdf-btn svg { flex-shrink: 0 !important; }
 
+/* ===== Instagramページ専用 ===== */
+.guide-wrap .g-insta-block {
+  background: #fff !important;
+  border-radius: 12px !important;
+  padding: 20px 16px !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+}
+.guide-wrap .g-insta-label {
+  font-size: 12px !important;
+  color: #888 !important;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+.guide-wrap .g-insta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+  color: #fff !important;
+  border-radius: 28px !important;
+  padding: 14px 32px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+}
+.guide-wrap .g-insta-btn:hover { opacity: 0.9 !important; text-decoration: none !important; }
+.guide-wrap .g-insta-url {
+  font-size: 12px !important;
+  color: #cc2366 !important;
+  margin: 12px 0 0 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  text-decoration: underline !important;
+}
+
 /* ===== LINEページ専用 ===== */
 .guide-wrap .g-line-block {
   background: #fff !important;
