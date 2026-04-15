@@ -422,6 +422,26 @@
 .guide-wrap .g-pdf-btn:hover { opacity: 0.85 !important; text-decoration: none !important; }
 .guide-wrap .g-pdf-btn svg { flex-shrink: 0 !important; }
 
+/* ===== 地図ページ専用 ===== */
+.guide-wrap .g-map-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #fff !important;
+  color: #1d9e75 !important;
+  border: 2px solid #1d9e75 !important;
+  border-radius: 10px !important;
+  padding: 14px 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+  margin-bottom: 10px !important;
+}
+.guide-wrap .g-map-btn:last-child { margin-bottom: 0 !important; }
+.guide-wrap .g-map-btn:hover { background: #e1f5ee !important; text-decoration: none !important; }
+.guide-wrap .g-map-btn svg { flex-shrink: 0 !important; }
+
 /* ===== Instagramページ専用 ===== */
 .guide-wrap .g-insta-block {
   background: #fff !important;
