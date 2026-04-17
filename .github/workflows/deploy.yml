@@ -3,6 +3,7 @@ name: GitHub Pages 自動デプロイ
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
