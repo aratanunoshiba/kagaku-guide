@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "timeout": 60,
+            "statusMessage": "GitHubにpush中...",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); echo \"$f\" | grep -q '\\.html$' || exit 0; cd \"/Users/nunoshibashin/claude/Projects/正会員メインwebアプリ\" && git add -A && (git diff --cached --quiet || git commit -m \"auto: ページを更新\") && git push https://aratanunoshiba:$(gh auth token)@github.com/aratanunoshiba/kagaku-guide.git main 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}
