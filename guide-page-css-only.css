@@ -518,3 +518,21 @@
   word-break: break-all !important;
   text-decoration: underline !important;
 }
+
+/* ===== Cocoonスマホ固定ボトムメニューを非表示（テスト：全ページ） ===== */
+#sp-menu-fixed,
+.sp-menu-fixed,
+#sp-footer-menu,
+.sp-footer-menu,
+.footer-nav-sp,
+#footer-nav,
+.footer-nav,
+#navi-footer,
+.navi-footer,
+.sp-menu-footer,
+#sp-menu-footer,
+.footer-menu-sp,
+.spmenu-footer,
+#spmenu-footer {
+  display: none !important;
+}
