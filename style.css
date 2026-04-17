@@ -1,0 +1,423 @@
+/* ===== 科学の学校ガイド — GitHub Pages用スタイルシート ===== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f4ef;
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+/* ===== 全体ラッパー ===== */
+.guide-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #f5f4ef;
+}
+
+/* ===== ヘッダー ===== */
+.g-hero {
+  background: #1a3a5c;
+  padding: 20px;
+}
+.g-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: left;
+}
+.g-logo {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.g-logo img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+}
+.g-hero-sub {
+  font-size: 9px;
+  color: #9bbdd8;
+  letter-spacing: 0.1em;
+  display: block;
+  margin: 0 0 4px 0;
+}
+.g-hero-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+.g-hero-desc {
+  font-size: 11px;
+  color: #b8d0e8;
+  display: block;
+  margin: 0;
+}
+
+/* ===== メニューエリア ===== */
+.g-body {
+  padding: 16px 10px 36px;
+}
+.g-label {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.1em;
+  display: block;
+  margin: 0 0 12px 0;
+}
+
+/* ===== 2列グリッド ===== */
+.g-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+/* ===== カード ===== */
+.g-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 20px 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 3px;
+  text-decoration: none;
+  color: #1a1a1a;
+  position: relative;
+  min-height: 90px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.g-card:hover { opacity: 0.85; }
+.g-card:active { opacity: 0.7; }
+
+/* ===== アイコンボックス ===== */
+.g-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 4px 0;
+  flex-shrink: 0;
+}
+.g-icon svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
+.g-ic-blue   { background: #e6f1fb; }
+.g-ic-teal   { background: #e1f5ee; }
+.g-ic-amber  { background: #faeeda; }
+.g-ic-coral  { background: #faece7; }
+.g-ic-purple { background: #eeedfe; }
+.g-ic-green  { background: #eaf3de; }
+.g-ic-navy   { background: #e8ecf5; }
+.g-ic-lime   { background: #e4f5e0; }
+.g-ic-steel  { background: #e4eef5; }
+.g-ic-sand   { background: #f5ede0; }
+.g-ic-rose   { background: #fde8e8; }
+
+/* ===== 矢印 ===== */
+.g-card-arrow {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1;
+}
+
+/* ===== カード内テキスト ===== */
+.g-card-num {
+  font-size: 9px;
+  color: #bbb;
+  letter-spacing: 0.08em;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.g-card-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.35;
+  display: block;
+  text-align: center;
+}
+
+/* ===== 非活性カード（全幅） ===== */
+.g-card-full {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 12px;
+  opacity: 0.4;
+  pointer-events: none;
+  padding: 14px;
+  min-height: 0;
+}
+.g-card-full .g-icon { margin: 0; }
+.g-card-full .g-card-num,
+.g-card-full .g-card-title { text-align: left; }
+.g-card-info { display: block; }
+.g-badge-off {
+  font-size: 10px;
+  background: #f0f0ec;
+  color: #bbb;
+  padding: 2px 8px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 4px 0 0 0;
+  font-weight: 400;
+}
+
+/* ===== 注記 ===== */
+.g-note {
+  font-size: 11px;
+  color: #bbb;
+  text-align: center;
+  display: block;
+  margin: 12px 0 0 0;
+  line-height: 1.6;
+}
+
+/* ===== サブページ：ヘッダー ===== */
+.g-sub-header {
+  background: #1a3a5c;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.g-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px 6px 8px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+.g-back-btn svg { width: 15px; height: 15px; display: block; }
+.g-sub-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.g-sub-icon svg { width: 16px; height: 16px; display: block; }
+.g-sub-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+.g-sub-num {
+  font-size: 9px;
+  color: #9bbdd8;
+  letter-spacing: 0.08em;
+  display: block;
+}
+.g-sub-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+}
+
+/* ===== サブページ：本文エリア ===== */
+.g-sub-body { padding: 20px 14px 0; }
+.g-sub-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.g-sub-text {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #333;
+  margin: 0 0 10px 0;
+  display: block;
+}
+.g-sub-text:last-child { margin-bottom: 0; }
+.g-sub-closing { text-align: center; color: #555; }
+
+/* ===== サブページ：下部ボタン ===== */
+.g-bottom-back {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 40px;
+}
+.g-bottom-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #1a3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+.g-bottom-btn svg { width: 15px; height: 15px; display: block; }
+.g-bottom-btn:active { opacity: 0.8; }
+
+/* ===== カレンダーページ ===== */
+.g-pdf-label {
+  font-size: 11px;
+  color: #888;
+  margin: 0 0 10px 0;
+  display: block;
+}
+.g-pdf-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a3a5c;
+  color: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.g-pdf-btn:last-child { margin-bottom: 0; }
+.g-pdf-btn:hover { opacity: 0.85; }
+.g-pdf-btn svg { flex-shrink: 0; }
+
+/* ===== 地図ページ ===== */
+.g-map-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #1d9e75;
+  border: 2px solid #1d9e75;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.g-map-btn:last-child { margin-bottom: 0; }
+.g-map-btn:hover { background: #e1f5ee; }
+.g-map-btn svg { flex-shrink: 0; }
+
+/* ===== Instagramページ ===== */
+.g-insta-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.g-insta-label {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 14px 0;
+  display: block;
+}
+.g-insta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border-radius: 28px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.g-insta-btn:hover { opacity: 0.9; }
+.g-insta-url {
+  font-size: 12px;
+  color: #cc2366;
+  margin: 12px 0 0 0;
+  display: block;
+  text-decoration: underline;
+}
+
+/* ===== LINEページ ===== */
+.g-line-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.g-line-label {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 14px 0;
+  display: block;
+}
+.g-line-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #06C755;
+  color: #fff;
+  border-radius: 28px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.g-line-btn:hover { opacity: 0.9; }
+.g-line-url {
+  font-size: 11px;
+  color: #06C755;
+  margin: 12px 0 0 0;
+  display: block;
+  word-break: break-all;
+  text-decoration: underline;
+}
